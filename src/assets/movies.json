@@ -1,0 +1,74 @@
+[
+    {
+        "title": "The Shawshank Redemption",
+        "rank": "1",
+        "id": "tt0111161",
+        "category": "drama",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMDFkYTc0MGEtZmNhMC00ZDIzLWFmNTEtODM1ZmRlYWMwMWFmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg"
+        
+    },
+    {
+        "title": "The Godfather",
+        "rank": "2",
+        "id": "tt0068646",
+        "category": "crime",
+        "poster": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+    
+    },
+    {
+        "title": "The Godfather: Part II",
+        "rank": "3",
+        "id": "tt0071562",
+        "category": "crime",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+    },
+    {
+        "title": "Pulp Fiction",
+        "rank": "4",
+        "id": "tt0110912",
+        "category": "crime",
+        "poster":"https://m.media-amazon.com/images/M/MV5BNGNhMDIzZTUtNTBlZi00MTRlLWFjM2ItYzViMjE3YzI5MjljXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+    },
+    {
+        "title": "The Good, the Bad and the Ugly",
+        "rank": "5",
+        "id": "tt0060196",
+        "category": "western",
+        "poster": "https://m.media-amazon.com/images/M/MV5BOTQ5NDI3MTI4MF5BMl5BanBnXkFtZTgwNDQ4ODE5MDE@._V1_SX300.jpg"
+    },
+    {
+        "title": "The Dark Knight",
+        "rank": "6",
+        "id": "tt0468569",
+        "category": "action",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_SX300.jpg"
+    },
+    {
+        "title": "12 Angry Men",
+        "rank": "7",
+        "id": "tt0050083",
+        "category": "crime",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMWU4N2FjNzYtNTVkNC00NzQ0LTg0MjAtYTJlMjFhNGUxZDFmXkEyXkFqcGdeQXVyNjc1NTYyMjg@._V1_SX300.jpg"
+    },
+    {
+        "title": "Schindler's List",
+        "rank": "8",
+        "id": "tt0108052",
+        "category": "history",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNDE4OTMxMTctNmRhYy00NWE2LTg3YzItYTk3M2UwOTU5Njg4XkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_SX300.jpg"
+    },
+    {
+        "title": "The Lord of the Rings: The Return of the King",
+        "rank": "9",
+        "id": "tt0167260",
+        "category": "action",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNzA5ZDNlZWMtM2NhNS00NDJjLTk4NDItYTRmY2EwMWZlMTY3XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+    },
+    {
+        "title": "Fight Club",
+        "rank": "10",
+        "id": "tt0137523",
+        "category": "drama",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMmEzNTkxYjQtZTc0MC00YTVjLTg5ZTEtZWMwOWVlYzY0NWIwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_SX300.jpg"
+    }
+]

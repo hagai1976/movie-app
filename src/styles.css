@@ -1,0 +1,262 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* app style */
+
+
+
+:root {
+    --primary: #00796b;
+    --accent: #9e9e9e;
+    --warn: #f44336;
+    --app-background: #dddddd;
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+* {
+    touch-action: manipulation;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    /* font-family: 'Heebo', sans-serif; */
+    font-family: 'Rubik', sans-serif;
+    /* font-size: 16px; */
+    margin: 0;
+    padding: 0;
+
+    /* prevent page reload on mobile */
+    /* overscroll-behavior: contain;  */
+
+
+    /* -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none; */
+}
+
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* text color */
+.primary {
+    color: var(--primary);
+}
+
+.warn {
+    color: var(--warn);
+}
+
+
+/* text size */
+.fs70 { font-size: 70% }
+.fs80 { font-size: 80% }
+.fs90 { font-size: 90% }
+.fs120 { font-size: 120% }
+.fs150 { font-size: 150% }
+.fs300 { font-size: 300% }
+
+/* font weight */
+.fw500 { font-weight: 500; }
+.fw600 { font-weight: 600; }
+.fw700 { font-weight: 700; }
+
+
+
+/* position element */
+.sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+
+.formTextFieldWidth80 .mat-form-field-wrapper {
+    padding-bottom: 0;
+}
+
+.formTextFieldWidth80 .mat-form-field-infix {
+    width: 80px;
+}
+
+
+.formDateFieldWidth100 .mat-form-field-infix {
+    width: 100px;
+}
+
+.formDateFieldWidth100 .mat-form-field-wrapper {
+    margin-bottom: -1.25em;
+}
+
+
+.mat-card-avatar-small {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+
+.mat-card-avatar-medium {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+
+.mat-card-avatar-bigger {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+
+.mat-card-avatar-big {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+
+/* scroll bar */
+
+::-webkit-scrollbar {
+    width: 14px;
+    height: 18px;
+}
+::-webkit-scrollbar-thumb {
+    height: 6px;
+    border: 4px solid rgba(0, 0, 0, 0);
+    background-clip: padding-box;
+    -webkit-border-radius: 7px;
+    background-color: rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: inset -1px -1px 0px rgba(0, 0, 0, 0.05), inset 1px 1px 0px rgba(0, 0, 0, 0.05);
+}
+/* ::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+    display: none;
+}
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #9e9e9e;
+} */
+
+/* mat selection list */
+mat-selection-list {
+    outline: none;
+}
+
+
+/* mat calendar */
+.mat-calendar-body {
+    font-size: unset;
+}
+
+
+/* dialog */
+
+
+.desktop-dialog > mat-dialog-container { padding: 0 !important }
+.desktop-dialog {
+    width: 30vw;
+    height: 80vh;
+    max-width: none !important;
+}
+
+.wide-desktop-dialog > mat-dialog-container { padding: 0 !important }
+.wide-desktop-dialog {
+    width: 50vw;
+    height: 80vh;
+    max-width: none !important;
+}
+
+.full-screen-dialog > mat-dialog-container { padding: 0 !important }
+.full-screen-dialog {
+    /* background: #ffffff; */
+    width: 100vw;
+    height: 100vh;
+    max-width: none !important;
+}
+
+
+.confirmation-dialog > mat-dialog-container { padding: 0 !important }
+.confirmation-dialog {
+    width: 100vw;
+    height: 50vh;
+    max-width: none !important;
+}
+
+
+
+/* unset border radius for the dialog */
+.mat-dialog-container { border-radius: unset !important; }
+
+
+/* rinting documents */
+
+@page {
+    size: A4;
+}
+
+app-root > app-print-layout { display: none; }
+
+@media print {
+    app-root > div > div > * { display: none; }
+    app-root > app-print-layout { display: block; }
+    html, body {
+        width: 210mm;
+        height: 297mm;
+    }
+}
+
+
+/* blink */
+.blink-me {
+    animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* icons */
+.app-small-icon {
+    transform: scale(.7);
+}
