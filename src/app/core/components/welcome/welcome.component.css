@@ -1,0 +1,28 @@
+.welcome-container {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+
+.login-box-desktop {
+    height: 90%;
+    width: 40%;
+    padding: 50px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.login-box-mobile {
+    height: 100%;
+    padding: 1rem 1rem 50px 1rem;
+
+}
+
+
+.router-outlet-container {
+    min-height: 70%;
+}
+
+
+

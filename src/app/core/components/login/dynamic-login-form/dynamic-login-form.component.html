@@ -1,0 +1,41 @@
+<form
+    class="dynamic-login-form"
+    [formGroup]="loginForm"
+    (ngSubmit)="submitted.emit(loginForm.value)"
+>
+    <div fxLayout="column">
+
+        <!-- USER NAME -->
+        <div
+            dynamicField
+            [config]="formConfig.username"
+            [group]="loginForm"
+        >
+        </div>
+
+        <!-- PASSWORD -->
+        <div
+            dynamicField
+            [config]="formConfig.password"
+            [group]="loginForm"
+        >
+        </div>
+
+        <!-- SUBMIT LOGIN FORM -->
+        <div fxLayout="row" fxLayoutAlign="end">
+            <div class="login-button-container">
+
+                <!-- SPINNER -->
+                <div class="spinner-container" *ngIf="loading">
+                    <mat-spinner diameter="24"></mat-spinner>
+                </div>
+
+                <!-- BUTTON -->
+                <button type="submit" mat-raised-button color="primary" [disabled]="!loginForm.valid || loading">כניסה</button>
+                
+            </div>
+        </div>
+
+    </div>
+
+</form>

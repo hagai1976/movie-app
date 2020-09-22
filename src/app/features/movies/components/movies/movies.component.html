@@ -1,0 +1,71 @@
+<ng-container *ngIf="(movies$ | async) as movies">
+
+    <div [ngClass]="layoutService.isMobile ? 'movies-dashboard-container-desktop' : 'movies-dashboard-container-mobile'">
+
+
+        <!-- POSITION FIXED -->
+        <mat-toolbar class="movies-mobile-toolbar" color="primary" *ngIf="layoutService.isMobile">
+            <span fxFlex fxLayoutAlign="space-between"> 
+                
+                <!-- BACK BUTTON & TITLE -->
+                <span fxFlex fxLayoutAlign="start center" fxLayoutGap=".5rem">
+                    <button mat-icon-button (click)="closeDrawer()">
+                        <mat-icon>arrow_back</mat-icon>
+                    </button>
+                    <span>{{ movieCategory$ | async }}</span>
+                </span>
+
+                <!-- MORE OPTIONS MENU -->
+                <span>
+                    <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+                        <mat-icon>more_vert</mat-icon>
+                    </button>
+                    <mat-menu #menu="matMenu">
+                        <button mat-menu-item>
+                        <mat-icon>add</mat-icon>
+                        <span>Add movie</span>
+                        </button>
+                        <button mat-menu-item>
+                            <mat-icon>exit_to_app</mat-icon>
+                            <span>Logout</span>
+                        </button>
+                    </mat-menu>
+                </span>
+
+            </span>
+        </mat-toolbar>
+
+
+
+        <div [ngClass]="layoutService.isMobile ? 'movies-dashboard-content-desktop' : 'movies-dashboard-content-mobile'">
+            
+            <div fxLayout="row wrap" fxLayoutGap="16px" fxLayoutAlign="flex-start" class="cardList">
+                <ng-container *ngFor="let movie of movies">
+
+                    <!-- MOVIE CARD -->
+                    <mat-card fxFlex="0 1 calc(50% - 16px)">
+                        <span fxFlex fxLayout="row" fxLayoutAlign="space-between">
+                            <span fxLayout="column">
+                                <button mat-icon-button color="warn" (click)="removeMovie(movie)">
+                                    <mat-icon>close</mat-icon>
+                                </button>
+                                <span fxFlex fxLayoutAlign="start center" style="word-break: normal; font-size: 120%; font-weight: 600;">{{ movie.title }}</span>
+                            </span>
+                            <a (click)="showMoviesOnImdbWebsite(movie.id)">
+                                <img 
+                                    [src]="movie.poster" 
+                                    [alt]="movie.title" 
+                                    [ngClass]="{ 'movie-card-for-desktop' : !layoutService.isMobile }"
+                                >
+                            </a>
+                        </span>
+                    </mat-card>
+
+                </ng-container>
+            </div>
+
+        </div>
+
+    </div>
+
+</ng-container>

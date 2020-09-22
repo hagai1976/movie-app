@@ -1,0 +1,22 @@
+.dynamic-product-form {
+    width: 100%;
+}
+
+
+/* login spinner */
+.spinner-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-button-container {
+    display: inline-block;
+    position: relative;
+}

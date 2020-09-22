@@ -1,0 +1,64 @@
+       <!-- POSITION STICKY -->
+       <mat-toolbar 
+       [ngClass]="!layoutService.isMobile ? 'movies-mobile-toolbar-desktop' : 'movies-mobile-toolbar-mobile'" 
+       color="primary"
+   >
+       <span fxFlex fxLayoutAlign="space-between"> 
+           
+           <!-- BACK BUTTON & TITLE -->
+           <span fxFlex fxLayoutAlign="start center" fxLayoutGap=".5rem">
+               <button mat-icon-button (click)="goBack()">
+                   <mat-icon>arrow_back</mat-icon>
+               </button>
+               <span>Movies Category</span>
+           </span>
+
+           <!-- MORE OPTIONS MENU *** MOBILE ONLY -->
+           <span *ngIf="layoutService.isMobile">
+                <app-mat-menu-three-dots
+                    [config]="matMenuThreeDotsConfig"
+                    (createItem)="createMovie()"
+                    (logoutAction)="logout()"
+                ></app-mat-menu-three-dots>
+           </span>
+
+       </span>
+   </mat-toolbar>
+
+<div [ngClass]="!layoutService.isMobile ? 'movies-dashboard-container-desktop' : 'movies-dashboard-container-mobile'">
+
+    <mat-drawer-container style="height: 100%;">
+        
+        <mat-drawer #moviesDrawer mode="over" opened="false" fxFlexFill *ngIf="layoutService.isMobile">
+            <app-movies [moviesDrawer]="moviesDrawer"></app-movies>
+        </mat-drawer>
+        
+        <mat-drawer-content>  
+        
+        
+                <div
+                    fxFlex fxLayout="row" fxLayoutAlign="space-between" fxLayoutGap="1rem" 
+                    [ngClass]="!layoutService.isMobile ? 'movies-dashboard-content-desktop' : 'movies-dashboard-content-mobile'">
+
+            
+                    <!-- MOVIES *** DESKTOP ONLY -->
+                    <div fxFlex="60" *ngIf="!layoutService.isMobile">
+                        <app-movies></app-movies>   
+                    </div>
+                
+
+                    <!-- MOVIE LIST *** DESKTOP & MOBILE -->
+                    <div fxFlex fxFlex.gt-sm="30">
+                        <app-movie-list 
+                            [moviesDrawer]="moviesDrawer"
+                            (logout)="logout()"
+                        ></app-movie-list>    
+                    </div>
+
+
+                </div>
+
+        </mat-drawer-content>
+    </mat-drawer-container>
+
+</div>

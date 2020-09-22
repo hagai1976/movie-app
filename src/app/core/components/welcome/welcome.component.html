@@ -1,0 +1,21 @@
+<div class="welcome-container animated fadeIn" fxLayoutAlign="center center">
+
+	<div
+		fxFlex.lt-md
+		fxLayout="column" fxLayoutAlign="center" fxLayoutGap="2rem"
+		[ngClass]="(!layoutService.isMobile) ? 'login-box-desktop' : 'login-box-mobile'"
+	>
+		<div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap=".5rem">
+			<h1>MOVIE APP</h1>
+			<div>{{ header }}</div>
+		</div>
+
+
+		<!-- ROUTER-OUTLET -->
+		<div class="router-outlet-container">
+			<router-outlet></router-outlet>
+		</div>
+
+	</div>
+
+</div>

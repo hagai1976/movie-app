@@ -1,0 +1,33 @@
+.movies-dashboard-container-desktop,
+.movies-dashboard-container-mobile {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.movies-dashboard-content-desktop,
+.movies-dashboard-content-mobile {
+    height: 100%;
+    overflow: auto;
+}
+
+
+.movie-card-for-desktop {
+    width: 150px;
+    height: auto;
+}
+
+:host {
+    display: block;
+    padding: 16px;
+
+  }
+
+  .cardList {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Row Gap */
+  .cardList > * {
+    margin-bottom: 16px;
+  }
